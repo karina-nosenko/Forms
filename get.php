@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        
         <script src="js/scripts.js"></script>
         <link rel="stylesheet" href="css/style1.css">
         <meta charset="UTF-8">
@@ -11,7 +14,7 @@
         <div id="phpWrapper">
             <section>
                     <?php
-                        echo "<h1>Thank you ".$_GET["name"]." for your personal data!</h1>"; 
+                        echo "<h1>Congratulations ".$_GET["name"]."! You did it!</h1>"; 
                     ?>
                     <p>
                         We saved your name, e-mail and phone number in our databases.<br>
@@ -40,7 +43,7 @@
             </div>
 
             <script>
-                setInterval(dinner, 150);
+                setInterval(dinner, 160);
             </script>
         </div>
     </body>

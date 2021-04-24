@@ -82,27 +82,9 @@ function checkForm(){
     document.getElementsByTagName("button")[0].disabled = !cansubmit;
 }
 
-/*Return the game to the initial parameters to start again*/
+/*Restart the page*/
 function reset(){
-    index = 0;
-    flag = false;
-
-    document.getElementById("failure").style.visibility = "hidden";
-
-    document.getElementById("mouth").style.visibility = "visible";
-    document.getElementById("foodContainer").style.left = "450px";
-    document.getElementById("i0").style.display = "block";
-    document.getElementById("i1").style.display = "block";
-    document.getElementById("i2").style.display = "block";
-    document.getElementById("i3").style.display = "block";
-    document.getElementById("i3").style.visibility = "hidden";
-    document.getElementById("i11").style.display = "none";
-    document.getElementById("i12").style.display = "none";
-    document.getElementById("i13").style.display = "none";
-    document.getElementById("i14").style.display = "none";
-    document.getElementById("i14").style.visibility = "visible";
-
-    var p = setInterval(breakfast, 800);
+    location.reload();
 }
 
 /*Function for get.php*/
@@ -147,5 +129,14 @@ function dinner(){
     else{
         //move food
         allFood.style.left="430x";
+    }
+}
+
+/*Function for index.html*/
+function validateForm() {
+    var x = document.forms["myForm"]["fullName"].value;
+    if (!x.includes(" ")) {
+        alert("Full Name must include a space");
+        return false;
     }
 }

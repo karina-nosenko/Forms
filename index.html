@@ -6,6 +6,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
+        <script src="js/scripts.js"></script>
         <link rel="stylesheet" href="css/style1.css">
         <meta charset="UTF-8">
         <title>Forms 1</title>
@@ -15,11 +16,11 @@
         <div id="wrapper1">
             <h1>Join Our Members Club</h1>
             <br>
-            <form action="http://se.shenkar.ac.il/teach/web1/2021/get_form3.php" method="GET" autocomplete="on">
+            <form action="http://se.shenkar.ac.il/teach/web1/2021/get_form3.php" method="GET" autocomplete="on" onsubmit="return validateForm()" name="myForm">
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Full name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" name="fullName" pattern="/^[a-zA-Z\s]*$/">
+                    <label for="fullName">Full name</label>
+                    <input type="text" class="form-control" name="fullName">
                 </div>
 
                 <div class="form-group">
@@ -35,23 +36,23 @@
                     </small>
                 </div>
 
-                <div class="form-group">
+                <div class="website">
                     <label for="formGroupExampleInput">Your Website</label>
-                    <input type="url" class="form-control" id="formGroupExampleInput" name="website">
+                    <input type="url" class="form-control" name="website">
                 </div>
 
-                <div class="form-group">
+                <div class="phone">
                     <label for="formGroupExampleInput">Phone</label>
-                    <input type="tel" class="form-control" id="formGroupExampleInput" name="phone" pattern="[0-9]{9,10}">
+                    <input type="tel" class="form-control" name="phone" pattern="[0-9]{9,10}">
                 </div>
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput">How many times I drink coffee a day?</label>
-                    <input type="number" class="form-control" id="formGroupExampleInput" min="0" max="5" name="coffee">
+                    <label for="coffee">How many times I drink coffee a day?</label>
+                    <input type="number" class="form-control" min="0" max="5" name="coffee">
                 </div>
 
                 <div class="form-group">
-                <label for="formControlRange">The temperature
+                <label for="formControlRange">The temperature</label>
                 <input type="range" class="form-control-range" id="formControlRange" name="temper">
                 </div>
 
@@ -113,5 +114,16 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
+
+        <script>
+
+            function validateForm() {
+                var x = document.forms["myForm"]["fullName"].value;
+                if (!x.includes(" ")) {
+                    alert("Full Name must include a space");
+                    return false;
+                }
+            }
+        </script>
     </body>
 </html>
