@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="css/style1.css">
+        <meta charset="UTF-8">
+        <title>Forms 1</title>
+    </head>
+
+    <body>
+        <div id="wrapper1">
+            <h1>Join Our Members Club</h1>
+            <br>
+            <form action="http://se.shenkar.ac.il/teach/web1/2021/get_form3.php" method="GET" autocomplete="on">
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Full name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="fullName" pattern="/^[a-zA-Z\s]*$/">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="pass" pattern=".{8,}">
+                    <small id="passwordHelpInline" class="text-muted">
+                        Must be at least 8 characters long.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Your Website</label>
+                    <input type="url" class="form-control" id="formGroupExampleInput" name="website">
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Phone</label>
+                    <input type="tel" class="form-control" id="formGroupExampleInput" name="phone" pattern="[0-9]{9,10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">How many times I drink coffee a day?</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput" min="0" max="5" name="coffee">
+                </div>
+
+                <div class="form-group">
+                <label for="formControlRange">The temperature
+                <input type="range" class="form-control-range" id="formControlRange" name="temper">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Address</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
+                </div>
+
+                <label for="interests[]">Interests:</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="interests[]" type="checkbox" value="Reading Books" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">Reading Books</label>
+                    <br>
+                    <input class="form-check-input" name="interests[]" type="checkbox" value="Programming" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">Programming</label>
+                    <br>
+                    <input class="form-check-input" name="interests[]" type="checkbox" value="Travel" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">Travel</label>
+                    <br>
+                    <input class="form-check-input" name="interests[]" type="checkbox" value="Drawing" id="defaultCheck4">
+                    <label class="form-check-label" for="defaultCheck4">Drawing</label>
+                </div>
+                <br>
+
+                <label for="gender">Gender:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="female" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                    Female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="male">
+                    <label class="form-check-label" for="exampleRadios2">
+                    Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="other">
+                    <label class="form-check-label" for="exampleRadios3">
+                    Other
+                    </label>
+                </div>
+                <br>
+                
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Your Age</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="age">
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
